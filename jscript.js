@@ -15,7 +15,7 @@ function cardCheck() {
     let regex1= new RegExp('^[a-zA-Z ]*$');
     let isValidName = regex1.test (varHolder.value); 
 
-    if (varNumber.value.length === 16 === true 
+    if (varNumber.value.length === 19 === true 
         && isValidNumber === true
         && varHolder.value.length >= 3 === true 
         && isValidName === true
@@ -60,7 +60,7 @@ function cardCheck() {
             parent.appendChild(button);
     }
 
-    else if (varNumber.value.length === 16 !== true || isValidNumber !== true){
+    else if (varNumber.value.length === 19 !== true || isValidNumber !== true){
         varNumber.style.borderColor = 'red';
         if (varHolder.value.length >= 3 !== true || isValidName !== true){
             varHolder.style.borderColor = 'red';
