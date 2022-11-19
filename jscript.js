@@ -38,7 +38,6 @@ function cardCheck() {
         document.getElementById('year').textContent = varMonth.value +"/"+ varYear.value;
         document.getElementById('cvc').textContent = varCvc.value;
 
-
             let heading = document.createElement('h1');
             heading.textContent = 'THANK YOU!';
             heading.id= 'heading';
@@ -59,6 +58,40 @@ function cardCheck() {
             parent.appendChild(heading);
             parent.appendChild(para);
             parent.appendChild(button);
+    }
+
+    else if (varNumber.value.length === 16 !== true || isValidNumber !== true){
+        varNumber.style.borderColor = 'red';
+        if (varHolder.value.length >= 3 !== true || isValidName !== true){
+            varHolder.style.borderColor = 'red';
+        } else {varHolder.style.borderColor = 'hsl(270, 3%, 87%'}
+
+        if (varYear.value.length === 2 !== true || varYear.value <= 26 !== true || isValidYear !== true){
+            varYear.style.borderColor = 'red';
+        } else {varYear.style.borderColor = 'hsl(270, 3%, 87%'}
+
+        if (varMonth.value.length === 2 !== true || varMonth.value <= 12 !== true || isValidMonth !== true){
+            varMonth.style.borderColor = 'red';
+        } else {varMonth.style.borderColor = 'hsl(270, 3%, 87%'}
+
+        if (varCvc.value.length === 3 !== true || isValidCvc !== true){
+            varCvc.style.borderColor = 'red';
+        } else {varCvc.style.borderColor = 'hsl(270, 3%, 87%'}
+    }
+}
+
+function spacingFunction(){
+    let varNumber = document.getElementById('cardnumber');
+    varNumber.onkeydown = function () {
+        if (varNumber.value.length === 4) {
+            varNumber.value += " ";
+            }
+        else if (varNumber.value.length === 9) {
+            varNumber.value += " ";
+            }
+        else if (varNumber.value.length === 14) {
+            varNumber.value += " ";
+        }
     }
 }
 
