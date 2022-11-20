@@ -6,7 +6,7 @@ function cardCheck() {
     let varMonth = document.getElementById('cardmonth');
     let varCvc = document.getElementById('cardcvc');  
 
-    let regex = new RegExp('^[0-9]*$');
+    let regex = new RegExp('^[0-9 ]*$');
     let isValidNumber = regex.test (varNumber.value); 
     let isValidMonth = regex.test (varMonth.value);  
     let isValidYear = regex.test (varYear.value);  
@@ -32,7 +32,7 @@ function cardCheck() {
         let child = document.getElementById('info');
         parent.removeChild(child);
 
-        document.getElementById('mid').textContent = varNumber.value.match(/.{4}/g).join(' ');
+        document.getElementById('mid').textContent = varNumber.value;
         document.getElementById('identity').textContent = varHolder.value;
         document.getElementById('identity').style.letterSpacing= "0";
         document.getElementById('year').textContent = varMonth.value +"/"+ varYear.value;
@@ -60,8 +60,8 @@ function cardCheck() {
             parent.appendChild(button);
     }
 
-    else if (varNumber.value.length === 19 !== true || isValidNumber !== true){
-        varNumber.style.borderColor = 'red';
+    else {
+
         if (varHolder.value.length >= 3 !== true || isValidName !== true){
             varHolder.style.borderColor = 'red';
         } else {varHolder.style.borderColor = 'hsl(270, 3%, 87%'}
@@ -77,20 +77,27 @@ function cardCheck() {
         if (varCvc.value.length === 3 !== true || isValidCvc !== true){
             varCvc.style.borderColor = 'red';
         } else {varCvc.style.borderColor = 'hsl(270, 3%, 87%'}
+
+        if (varNumber.value.length === 19 !== true || isValidNumber !== true){
+            varNumber.style.borderColor = 'red';
+        } else {varNumber.style.borderColor = 'hsl(270, 3%, 87%'}
     }
 }
 
 function spacingFunction(){
+
     let varNumber = document.getElementById('cardnumber');
     varNumber.onkeydown = function () {
         if (varNumber.value.length === 4) {
-            varNumber.value += " ";
+            varNumber.value +=" ";
             }
+    
         else if (varNumber.value.length === 9) {
-            varNumber.value += " ";
+            varNumber.value +=" ";
             }
+
         else if (varNumber.value.length === 14) {
-            varNumber.value += " ";
+            varNumber.value +=" ";
         }
     }
 }
