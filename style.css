@@ -1,271 +1,99 @@
 * {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    margin: 0;
     box-sizing: border-box;
-    color: white;
+    font-size: 18px;
+    margin: 0;
+    color: rgba(32, 32, 32, 0.904);
+    font-family: 'Rock Salt', cursive;
 }
 
-body, html {
-    height: 100%;
-    min-width: 375px;
-    min-height: 700px;
-}
-
-body, html, input, button, .name-surname{
-    width: 100%;
-}
-
-body, html, main, .left, .right, .info, .front, .back, .name,
-.date, .number, .button, .exp-div, .cvc-div, .month-year, .month,
-.year, .front-side, .name-surname, .logo, .mid {
+html, body, main,.heading, .places, .montenegro, .croatia, .bosnia, .hungary, .italy,
+ .pin-div, .name-div, .pic-div {
     display: flex;
 }
 
-main, .left, .right, .info, .exp-div, .cvc-div,
-.name, .number, .front-side {
-    flex-direction: column;
-}
-
-.date, .month-year, .name-surname {
-    flex-direction: row;
+body, html {
+    min-width:375px;
+    min-height:668px;
+    height: 100%;
 }
 
 body {
-    justify-content: center;
-    align-items: center;
-    padding: 10% 7%;
+    padding: 11.25px;
+    background: linear-gradient(rgba(163, 195, 241, 0), rgba(222, 223, 224, 0.596)), url("./images/Background\ photo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-main {
-    width: 322.5px;
-}
-
-button {
-    background-color: hsl(278, 68%, 11%);
-}
-
-button, .back div {
-    border: 0;
-}
-
-.left {
-    position: relative;
-    height: 190px;
-    background-image: url("./images/bg-main-mobile.png"); 
-}
-
-.left img {
-    width: 75%;
-}
-
-.left img, .back div, .mid, .name-surname {
+body::after{
+    content: url("");
+    background-image: url("/images/avionche.png");
     position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 25px;
+    left: 75%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.back div, p {
-    font-size: 0.6rem;
+body, main {
+    align-items: center;
+    justify-content: center;
 }
 
-.back div {
-    background-color: unset;
-    color: white;
-    top: 45.5%;
-    left: 80%;
+main, .places, .heading {
+    width: 352.5px;
+    flex-direction: column;
 }
 
-.logo img{
-    margin: 5%;
-    width: 15%;
+.montenegro, .croatia, .bosnia, .hungary, .italy {
+    flex-direction: row;
+    height: 100px;
+    padding: 2%;
 }
 
-.front img{
-    top: 55%;
-    left: 5%;
-}
-
-.mid, .name-surname {
-    left: 10%;
-}
-
-.mid, .identity, .year, p {
-    letter-spacing: 0.1rem;
-}
-
-.mid {
-    top: 90%;
-    font-size: 0.85rem;
-}
-
-.name-surname {
-    top: 110%;
-}
-
-.identity, .year {
-    font-size: 0.5rem;
-}
-
-.back img {
-    top: 15%;
-    left: 20%;
-}
-
-button, input {
-    padding: 0.5rem 0.7rem;
-    border-radius: 0.5rem;
-}
-
-::placeholder {
-    color: hsl(270, 3%, 87%);
-}
-
-.info {
-    padding: 30% 10% 10% 5%;
-    background-color: hsl(0, 0%, 98%);
-}
-
-.name, .number, .date {
-    margin-bottom: 7%;
-}
-
-.date p {
-    margin-bottom: 2%;
-}
-
-.name p, .number p {
-    margin-bottom: 1%;
-}
-
-.month, .year, .exp-div, .cvc-div {
-    flex-basis: 48%;
-}
-
-.info p {
-    color: hsl(278, 68%, 11%);
-}
-
-.date, .month-year, .name-surname {
-    justify-content: space-between;
-}
-
-input {
-    border: 1px solid hsl(270, 3%, 87%);
-}
-
-#image {
-    margin-top: 30%;
-    width: 20%;
-    align-self: center;
-}
-
-#heading, #para, input{
-    color:hsl(278, 68%, 11%); ;
-}
-
-#heading, #para, #image {
-    margin-bottom: 10%;
-    align-self: center;
-}
-
-#heading, #para {
-    letter-spacing:unset ;
-}
-
-#heading {
-    font-size: 1.4rem;
-}
-
-button:hover{
+.montenegro:hover, .croatia:hover, .bosnia:hover, .hungary:hover, .italy:hover {
     cursor: pointer;
-    opacity: 0.7;
+    background-color: rgba(184, 171, 171, 0.363);
 }
 
-@media (min-width:900px){
+.montenegro, .croatia, .hungary, .italy {
+    margin-bottom: 3%;
+}
 
-    html, body {
-        min-width: 1440px;
-        min-height: 590px;
-    }
+.pin-div {
+    flex-basis: 10%;
+    align-items: center;
+}
 
-    main {
-        width: 1440px;
-        height: 586.2px;
-        flex-direction: row;
-    }
+.pin-div img {
+    height: 30%;
+}
 
-    .left {
-        flex-basis: 35%;
-        height: auto;
-        background-image: url("./images/bg-main-desktop.png");
-        width: 100%;
-        background-size: cover;
-    }
+.name-div {
+    flex-basis: 45%;
+    align-items: center;
+    justify-self: left;
+    font-size: 14px;
+    letter-spacing: 0.15rem;
+}
 
-    .left img {
-        width: 65%;
-    }
+.pic-div img {
+    width: 120px;
+    border-radius: 0.3rem;
+    opacity: 0.77;
+}
 
-    .right {
-        flex-basis: 65%;
-        padding: 10% 20% 10% 20%;
-    }
+.pic-div {
+    flex-basis: 45%;
+    justify-content: right;
+}
 
-    .info {
-        background-color: white;
-    }
+h1 {
+    letter-spacing: 0.5rem;
+    text-align: left;
+}
 
-    .info, body {
-        padding: unset;
-    }
-
-    .front img{
-        top: 20%;
-        left: 50%;
-    }
-
-    .back img {
-        top: 55%;
-        left: 65%;
-    }
-
-    .back div {
-        top: 68%;
-        left: 117%;
-    }
-
-    .logo img{
-        margin: 4%;
-        width: 10%;
-    }
-
-    .mid {
-        top: 37%;
-        font-size: 1rem;
-    }
-    
-    .mid, .name-surname {
-        left: 55%;
-        width: 250px;
-    }
-    .name-surname {
-        top: 43%;
-        letter-spacing: normal;
-    }
-
-    .year{
-        justify-content: right;
-    }
-
-    .identity {
-        width: 80%;
-    }
-
-    .year, .identity, .back div {
-        font-size: 0.9rem;
-    }
-
-    #image {
-        margin-top: 8%;
-    }
+.heading {
+    padding:10% 3%;
 }

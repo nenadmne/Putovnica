@@ -6,73 +6,70 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-  <script src="./jscript.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
 
+
+  
   <title>Frontend Mentor | Interactive card details form</title>
 
 </head>
   <body>
     <main>
 
-      <div class="left">
-        <div class="back">
-          <img src="./images/bg-card-back.png" alt="back">
-          <div id="cvc"> 000 </div>
-        </div>
-        <div class="front">
-          <img src="./images/bg-card-front.png" alt="front">
-          <div class="front-side">
-            <div class="logo">
-              <img src="./images/card-logo.svg" alt="logo">
-            </div>
-            <div id="mid" class="mid"> 0000 0000 0000 0000 </div>
-            <div class="name-surname">
-              <div id="identity" class="identity"> Name & Surname </div>
-              <div id="year" class="year"> 00/00 </div>
-            </div>
-          </div>
+      <div class="heading">
+        <div>
+          <h1> TRAVEL DIARY </h1>
         </div>
       </div>
 
-      <div id="right" class="right">
-
-        <div id="info" class="info">
-          <div class="name">
-              <p> CARDHOLDER NAME </p>
-              <input id="cardholder" type="text" placeholder="e.g. Jane Appleseed">
+      <div class="places">
+        <div class="montenegro">
+          <div class="pin-div">
+            <img src="./images/pin.png" alt="pin">
           </div>
-          
-          <div class="number">
-            <p> CARD NUMBER </p>
-            <input id="cardnumber" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" type="text" onkeydown="spacingFunction()">
+          <div class="name-div"> MONTENEGRO </div>
+          <div class="pic-div">
+            <img src="./images/CG.JPG" alt="crna gora">
           </div>
-
-          <div class="date">
-            <div class="exp-div"> 
-              <div>
-                <p> EXP. DATE (MM/YY) </p>
-              </div>
-              <div class="month-year">
-                <div class="month">
-                  <input id="cardmonth" type="text" placeholder="MM" maxlength="2">
-                </div>
-                <div class="year">
-                  <input id="cardyear" type="text" placeholder="YY" maxlength="2">
-                </div>
-              </div>
-            </div> 
-            <div class="cvc-div">
-              <p> CVC </p>
-              <input id="cardcvc" type="text" placeholder="e.g. 123" maxlength="3">
-            </div>
+        </div>
+        <div class="italy">
+          <div class="pin-div">
+            <img src="./images/pin.png" alt="pin">
           </div>
-          <div class="button">
-            <button onclick="cardCheck()"> Confirm </button>
+          <div class="name-div"> ITALY </div>
+          <div class="pic-div">
+            <img src="./images/Italija.JPG" alt="italija">
           </div>
-
+        </div>
+        <div class="hungary">
+          <div class="pin-div">
+            <img src="./images/pin.png" alt="pin">
+          </div>
+          <div class="name-div"> HUNGARY </div>
+          <div class="pic-div">
+            <img src="./images/Budimpesta.jpg" alt="Budimpesta">
+          </div>
+        </div>
+        <div class="croatia">
+          <div class="pin-div">
+            <img src="./images/pin.png" alt="pin">
+          </div>
+          <div class="name-div"> CROATIA </div>
+          <div class="pic-div">
+            <img src="./images/Dubrovnik.jpg" alt="hrvatska">
+          </div>
+        </div>
+        <div class="bosnia">
+          <div class="pin-div">
+            <img src="./images/pin.png" alt="pin">
+          </div>
+          <div class="name-div"> BOSNIA </div>
+          <div class="pic-div">
+            <img src="./images/Trebinje.jpg" alt="bosna">
+          </div>
         </div>
       </div>
 
