@@ -6,7 +6,7 @@
     font-family: 'Rock Salt', cursive;
 }
 
-html, body, main,.heading, .places, .montenegro, .croatia, .bosnia, .hungary, .italy,
+html, body, main, .heading, .head-img, .head-div, .places, .montenegro, .croatia, .bosnia, .hungary, .italy,
  .pin-div, .name-div, .pic-div {
     display: flex;
 }
@@ -24,24 +24,12 @@ body {
     background-repeat: no-repeat;
 }
 
-body::after{
-    content: url("");
-    background-image: url("/images/avionche.png");
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    top: 25px;
-    left: 75%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 body, main {
     align-items: center;
     justify-content: center;
 }
 
-main, .places, .heading {
+main, .places{
     width: 352.5px;
     flex-direction: column;
 }
@@ -93,8 +81,22 @@ main, .places, .heading {
 h1 {
     letter-spacing: 0.5rem;
     text-align: left;
+    align-self: flex-end;
 }
 
 .heading {
-    padding:10% 3%;
+    padding:3% 3% 7% 3%;
+    flex-direction: row;
+}
+
+.heading img {
+    width: 100%;
+}
+
+.head-img {
+    flex-basis: 19%;
+}
+
+.head-div {
+    flex-basis: 81%;
 }
